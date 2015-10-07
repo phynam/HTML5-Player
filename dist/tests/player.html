@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Audio Player</title>
+    <link rel="stylesheet" href="../assets/css/player.css">
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #efefef;
+            font-family: helvetica, arial, sans-serif;
+        }
+
+        a, a:visited, a:active {
+            color: inherit;
+            text-decoration: none;
+            outline: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="player">
+    <div aria-role="button" class="player__control">
+        <i class="player__icon"></i>
+    </div>
+    <div class="player__seek">
+        <div class="seek_bar">
+            <div data-player-target="download" class="seek_bar__download"></div>
+            <div data-player-target="progress" class="seek_bar__progress"></div>
+        </div>
+    </div>
+    <div class="player__meta">
+        <div class="meta__title">
+            <a data-player-target="meta_title" href="#">A Sound Effect</a>
+        </div>
+        <div class="meta__subtitle">
+            <a data-player-target="meta_subtitle" href="#">A descriptive subtitle</a>
+        </div>
+    </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/soundmanager2/2.97a.20150601/script/soundmanager2-nodebug-jsmin.js"></script>
+<script src="../assets/js/player.js"></script>
+
+</body>
+</html>

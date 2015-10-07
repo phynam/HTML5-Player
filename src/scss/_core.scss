@@ -1,0 +1,75 @@
+.player {
+  position: fixed;
+  bottom: 0; left: 0;
+  width: 100%;
+  height: $player-height;
+  padding-left: $player-height;
+}
+
+.player > * {
+  height: inherit;
+}
+
+.player__control {
+  position: absolute;
+  top: 0; left: 0;
+  width: $player-height;
+  line-height: $player-height;
+  text-align: center;
+  cursor: pointer;
+}
+
+.player__icon {
+  display: inline-block;
+  font-family: 'FontAwesome';
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+
+  &:before {
+    content: '\f04b'; // TODO: Replace with base64
+  }
+}
+
+.player.is-playing .player__icon:before {
+  content: '\f04c';
+}
+
+.player__functions {
+  position: relative;
+  padding-left: $player-height;
+}
+
+.player__seek {
+  float: left;
+  width: 70%;
+  height: inherit;
+  cursor: pointer;
+}
+
+.player__meta {
+  float: right;
+  width: 30%;
+  padding: 15px 20px 0;
+}
+
+.player__meta > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.seek_bar {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.seek_bar > * {
+  position: absolute;
+  width: 0;
+  height: inherit;
+}
