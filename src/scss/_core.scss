@@ -4,6 +4,14 @@
   width: 100%;
   height: $player-height;
   padding-left: $player-height;
+
+  @if ($show-animation) {
+    transition: bottom $show-animation-time;
+  }
+}
+
+.player[aria-hidden='true'] {
+  bottom: -$player-height;
 }
 
 .player > * {

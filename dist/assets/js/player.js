@@ -28,7 +28,7 @@ var Player = function() {
     this.init = function() {
         var context = this;
         this.$el.on('click', '.player__control', function() {
-            context.play();
+            context.toggle();
         });
         this.$el.on('click', '.player__seek', function(e) {
             var position_x = $(this).offset().left,
@@ -39,9 +39,15 @@ var Player = function() {
             mySound.setPosition(position);
         });
     };
-    this.play = function() {
+    this.toggle = function() {
         this.$el.toggleClass('is-playing');
         mySound.togglePause();
+    };
+    this.show = function(play) {
+        if(play) {
+            this.toggle();
+        }
+        this.$el.attr('aria-hidden', false);
     };
     this.init();
 };

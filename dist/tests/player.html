@@ -29,8 +29,24 @@
     </style>
 </head>
 <body>
+<div class="header"></div>
+<div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
 
-<div class="player">
+<div class="button_play">
+    Play sound
+</div>
+
+<div class="player" aria-hidden="true">
     <div aria-role="button" class="player__control">
         <i class="player__icon"></i>
     </div>
@@ -47,7 +63,7 @@
             <a data-player-target="meta_title" href="#">A Sound Effect</a>
         </div>
         <div class="meta__subtitle">
-            <a data-player-target="meta_subtitle" href="#">A descriptive subtitle</a>
+            <a data-player-target="meta_subtitle" href="#">Collection</a>
         </div>
     </div>
 </div>
@@ -55,6 +71,10 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/soundmanager2/2.97a.20150601/script/soundmanager2-nodebug-jsmin.js"></script>
 <script src="../assets/js/player.js"></script>
-
+<script>
+    $('.button_play').on('click', function() {
+       player.show(true);
+    });
+</script>
 </body>
 </html>
